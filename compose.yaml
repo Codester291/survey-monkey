@@ -1,0 +1,15 @@
+services:
+  mongodb:
+    image: 'mongo:latest'
+    container_name: survey-monkey-mongo
+    environment:
+      - 'MONGO_INITDB_DATABASE=survey_monkey'
+#      - 'MONGO_INITDB_ROOT_PASSWORD=secret'
+#      - 'MONGO_INITDB_ROOT_USERNAME=root'
+    ports:
+      - '27017'
+  redis:
+    image: 'redis:latest'
+    container_name: survey-monkey-redis
+    ports:
+      - '6379'
