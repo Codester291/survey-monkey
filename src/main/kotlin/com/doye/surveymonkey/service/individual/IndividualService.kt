@@ -31,4 +31,8 @@ class IndividualService(
         individualRepo.save(individual)
         return ResponseDto("00", "Created Individual Successful", individualRepo.save(individual))
     }
+
+    fun getIndividuals(): ResponseDto<Any> {
+        return ResponseDto("00", "Successful", individualRepo.findAll())
+    }
 }
