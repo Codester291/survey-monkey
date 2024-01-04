@@ -15,7 +15,8 @@ class IndividualController(
 ) {
 
     @ResponseBody
-    @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])
+    @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE],
+        produces = [MediaType.APPLICATION_JSON_VALUE])
     fun registerIndividual(@Valid @RequestBody individualDTO: IndividualDTO): ResponseDto<Any> {
         return individualService.register(individualDTO)
     }
