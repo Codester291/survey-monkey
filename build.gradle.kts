@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.doye"
-version = "0.0.1-SNAPSHOT"
+version = "v1"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
