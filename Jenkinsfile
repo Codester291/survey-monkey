@@ -8,6 +8,16 @@ pipeline {
     }
 
     stages {
+
+        stage('Build Gradle') {
+            steps {
+                script {
+                    sh './gradlew clean'
+                    sh './gradlew build'
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
